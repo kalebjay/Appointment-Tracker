@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.CalendarController">
+    <children>         
+        <GridPane fx:id="monthGridpane" alignment="TOP_RIGHT" gridLinesVisible="true" layoutX="10.0" layoutY="90.0" prefHeight="515.0" prefWidth="880.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            </GridPane>
+            <GridPane alignment="CENTER" layoutY="60.0" prefHeight="30.0" prefWidth="880.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />             
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+                <children>
+                    <Label fx:id="sundayLabel" alignment="CENTER" contentDisplay="CENTER" text="Sunday" textAlignment="CENTER" GridPane.halignment="CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="mondayLabel" alignment="CENTER" contentDisplay="CENTER" text="Monday" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="tuesdayLabel" alignment="CENTER" contentDisplay="CENTER" text="Tuesday" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="wednesdayLabel" alignment="CENTER" contentDisplay="CENTER" text="Wednesday" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="thursdayLabel" alignment="CENTER" contentDisplay="CENTER" text="Thursday" GridPane.columnIndex="4" GridPane.halignment="CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="fridayLabel" alignment="CENTER" contentDisplay="CENTER" text="Friday" GridPane.columnIndex="5" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                    </Label>
+                    <Label fx:id="saturdayLabel" alignment="CENTER" contentDisplay="CENTER" text="Saturday" GridPane.columnIndex="6" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                    </Label>
+                           </children>
+            </GridPane>
+                <Button fx:id="previousMonthBTN" layoutX="300.0" layoutY="15.0" mnemonicParsing="false" onAction="#loadPreviousMonth" text="&lt;">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="nextMonthBTN" layoutX="555.0" layoutY="15.0" mnemonicParsing="false" onAction="#loadNextMonth" text="&gt;">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Label fx:id="monthViewLabel" layoutX="355.0" layoutY="20.0" text="Month">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>                   
+      <Label layoutX="75.0" layoutY="650.0" text="Manage Appointments">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="createNewBTN" layoutX="320.0" layoutY="645.0" mnemonicParsing="false" onAction="#goToManageAptmtViaCreateNewBTN" prefHeight="40.0" prefWidth="120.0" text="Create New">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateBTN" layoutX="450.0" layoutY="645.0" mnemonicParsing="false" onAction="#goToManageAptmtViaUpdateBTN" prefHeight="40.0" prefWidth="100.0" text="Update">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteBTN" layoutX="560.0" layoutY="645.0" mnemonicParsing="false" onAction="#deleteAppointmentData" prefHeight="40.0" prefWidth="100.0" text="Delete">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="mainMenuBTN" layoutX="740.0" layoutY="645.0" mnemonicParsing="false" onAction="#goToMainMenuView" prefHeight="40.0" prefWidth="120.0" text="Main Menu">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="WeeklyViewBTN" layoutX="40.0" layoutY="15.0" mnemonicParsing="false" onAction="#goToWeeklyView" prefHeight="40.0" prefWidth="140.0" text="Weekly View">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

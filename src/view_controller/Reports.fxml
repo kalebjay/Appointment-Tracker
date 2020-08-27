@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.ReportsController">
+   <children>
+      <Label layoutX="309.0" layoutY="5.0" text="Reports">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="5.0" layoutY="50.0" prefHeight="450.0" prefWidth="690.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="typeTab" text="Appointment Types Per Month">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="aptmtTypeTableView" layoutX="5.0" layoutY="45.0" prefHeight="375.0" prefWidth="685.0">
+                          <columns>
+                            <TableColumn fx:id="typeCol" prefWidth="200.0" text="Type" />
+                            <TableColumn fx:id="quantCol" prefWidth="200.0" text="Quantity" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="200.0" layoutY="15.0" mnemonicParsing="false" onAction="#launchTypeReport" text="Launch Report" />
+                        <ComboBox fx:id="monthComboBox" layoutX="15.0" layoutY="15.0" prefWidth="150.0" promptText="Select Month" />
+                     </children></AnchorPane>
+               </content>
+          </Tab>
+          <Tab fx:id="scheduleTab" text="Consultant's Schedule">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="scheduleTableView" layoutX="5.0" layoutY="45.0" prefHeight="375.0" prefWidth="685.0">
+                          <columns>
+                            <TableColumn fx:id="customerSchedCol" prefWidth="120.0" text="Customer" />
+                            <TableColumn fx:id="typeSchedCol" prefWidth="140.0" text="Type of Appointment" />
+                              <TableColumn fx:id="dateSchedCol" prefWidth="100.0" text="Date" />
+                              <TableColumn fx:id="startSchedCol" prefWidth="120.0" text="Start" />
+                              <TableColumn fx:id="endSchedCol" prefWidth="120.0" text="End" />
+                          </columns>
+                        </TableView>
+                        <ComboBox fx:id="consultantComboBox" layoutX="15.0" layoutY="15.0" prefWidth="150.0" promptText="Consultants" />
+                        <Button layoutX="200.0" layoutY="15.0" mnemonicParsing="false" onAction="#launchScheduleReport" text="Launch Report" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="countryTab" text="Customers By Country">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="countryTableView" layoutX="5.0" layoutY="1.0" prefHeight="419.0" prefWidth="685.0">
+                          <columns>
+                            <TableColumn fx:id="customerCol" prefWidth="150.0" text="Customer Name" />
+                            <TableColumn fx:id="cityCol" prefWidth="150.0" text="City of Residence" />
+                              <TableColumn fx:id="countryCol" prefWidth="150.0" text="Country" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="mainMenuBTN" layoutX="15.0" layoutY="10.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

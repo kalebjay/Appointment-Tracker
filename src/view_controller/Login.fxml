@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.LoginController">
+   <children>
+      <Button fx:id="loginBTN" layoutX="120.0" layoutY="150.0" mnemonicParsing="false" onAction="#executeLogin" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="loginLabel" layoutX="30.0" layoutY="15.0" text="Login">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="userNameLabel" layoutX="35.0" layoutY="70.0" text="User Name">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="passwordLabel" layoutX="40.0" layoutY="110.0" text="Password">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="userNameTXT" layoutX="110.0" layoutY="70.0" />
+      <PasswordField fx:id="passwordTXT" layoutX="110.0" layoutY="110.0" />
+      <Button fx:id="exitBTN" layoutX="200.0" layoutY="150.0" mnemonicParsing="false" onAction="#exitProgram" text="Exit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
