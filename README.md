@@ -1,6 +1,6 @@
 # Appointment-Tracker
 This is a program that tracks appointments and allows a user to create, delete, and modify data 
-related to a the appointments. There is connection to a SQL database and prepared statements are used
+related to appointments. There is a connection to a SQL database and prepared statements are used
 to interact with the database. There are multiple files to establish the variables used in the
 classes. There are also controllers and fxml files that create the GUIs that the user interacts with.
 When a user makes changes in a GUI, the information is passed safely through the code and updated 
